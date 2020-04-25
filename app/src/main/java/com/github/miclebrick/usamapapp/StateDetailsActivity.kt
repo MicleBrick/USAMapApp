@@ -107,7 +107,7 @@ class StateDetailsActivity : AppCompatActivity() {
 
         override fun onFling(e1: MotionEvent, e2: MotionEvent, vx: Float, vy: Float): Boolean {
             var nextState: State?
-            var maxDegrees = 0
+            var maxDegrees = 20
             do {
                 maxDegrees++
                 nextState = State.values()
