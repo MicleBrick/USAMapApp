@@ -9,33 +9,36 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.ScaleGestureDetector
 import android.view.ScaleGestureDetector.SimpleOnScaleGestureListener
-import android.widget.Toast
+import kotlin.math.abs
+import kotlin.math.min
+import kotlin.math.roundToInt
+import kotlin.math.roundToLong
 
 class MapView(
     context: Context,
     attr: AttributeSet?
 ) : androidx.appcompat.widget.AppCompatImageView(context, attr) {
-    var customMatrix = Matrix()
-    var mode = NONE
-    var last = PointF()
-    var start = PointF()
-    var minScale = 1f
-    var maxScale = 4f
-    var m: FloatArray
-    var redundantXSpace = 0f
-    var redundantYSpace = 0f
-    var width = 0f
-    var height = 0f
-    var saveScale = 1f
-    var right = 0f
-    var bottom = 0f
-    var origWidth = 0f
-    var origHeight = 0f
-    var mScaleDetector: ScaleGestureDetector
-    var bmWidth = 0f
-    var bmHeight = 0f
+    private var customMatrix = Matrix()
+    private var mode = NONE
+    private var last = PointF()
+    private var start = PointF()
+    private var minScale = 1f
+    private var maxScale = 4f
+    private var m: FloatArray
+    private var redundantXSpace = 0f
+    private var redundantYSpace = 0f
+    private var width = 0f
+    private var height = 0f
+    private var saveScale = 1f
+    private var right = 0f
+    private var bottom = 0f
+    private var origWidth = 0f
+    private var origHeight = 0f
+    private var scaleDetector: ScaleGestureDetector
+    private var bmWidth = 0f
+    private var bmHeight = 0f
 
-    lateinit var bitmap: Bitmap
+    private lateinit var bitmap: Bitmap
 
     override fun setImageBitmap(bm: Bitmap) {
         super.setImageBitmap(bm)
@@ -70,16 +73,22 @@ class MapView(
                     val x = m[Matrix.MTRANS_X]
                     val y = m[Matrix.MTRANS_Y]
                     if (mScaleFactor < 1) {
-                        if (Math.round(origWidth * saveScale) < width) {
-                            if (y < -bottom) customMatrix.postTranslate(
-                                0f,
-                                -(y + bottom)
-                            ) else if (y > 0) customMatrix.postTranslate(0f, -y)
+                        if ((origWidth * saveScale).roundToLong() < width) {
+                            if (y < -bottom) {
+                                customMatrix.postTranslate(0f, -(y + bottom))
+                            } else {
+                                if (y > 0) {
+                                    customMatrix.postTranslate(0f, -y)
+                                }
+                            }
                         } else {
-                            if (x < -right) customMatrix.postTranslate(
-                                -(x + right),
-                                0f
-                            ) else if (x > 0) customMatrix.postTranslate(-x, 0f)
+                            if (x < -right) {
+                                customMatrix.postTranslate(-(x + right), 0f)
+                            } else {
+                                if (x > 0) {
+                                    customMatrix.postTranslate(-x, 0f)
+                                }
+                            }
                         }
                     }
                 }
@@ -94,14 +103,18 @@ class MapView(
                 val x = m[Matrix.MTRANS_X]
                 val y = m[Matrix.MTRANS_Y]
                 if (mScaleFactor < 1) {
-                    if (x < -right) customMatrix.postTranslate(
-                        -(x + right),
-                        0f
-                    ) else if (x > 0) customMatrix.postTranslate(-x, 0f)
-                    if (y < -bottom) customMatrix.postTranslate(
-                        0f,
-                        -(y + bottom)
-                    ) else if (y > 0) customMatrix.postTranslate(0f, -y)
+                    if (x < -right) {
+                        customMatrix.postTranslate(-(x + right), 0f)
+                    } else {
+                        if (x > 0) {
+                            customMatrix.postTranslate(-x, 0f)
+                        }
+                    }
+                    if (y < -bottom) {
+                        customMatrix.postTranslate(0f, -(y + bottom))
+                    } else if (y > 0) {
+                        customMatrix.postTranslate(0f, -y)
+                    }
                 }
             }
             return true
@@ -112,16 +125,13 @@ class MapView(
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
         width = MeasureSpec.getSize(widthMeasureSpec).toFloat()
         height = MeasureSpec.getSize(heightMeasureSpec).toFloat()
-        //Fit to screen.
         val scale: Float
         val scaleX = width / bmWidth
         val scaleY = height / bmHeight
-        scale = Math.min(scaleX, scaleY)
+        scale = min(scaleX, scaleY)
         customMatrix.setScale(scale, scale)
         imageMatrix = customMatrix
         saveScale = 1f
-
-        // Center the image
         redundantYSpace = height - scale * bmHeight
         redundantXSpace = width - scale * bmWidth
         redundantYSpace /= 2f
@@ -143,13 +153,13 @@ class MapView(
 
     init {
         super.setClickable(true)
-        mScaleDetector = ScaleGestureDetector(context, ScaleListener())
+        scaleDetector = ScaleGestureDetector(context, ScaleListener())
         customMatrix.setTranslate(1f, 1f)
         m = FloatArray(9)
         imageMatrix = customMatrix
         scaleType = ScaleType.MATRIX
-        setOnTouchListener { v, event ->
-            mScaleDetector.onTouchEvent(event)
+        setOnTouchListener { _, event ->
+            scaleDetector.onTouchEvent(event)
             customMatrix.getValues(m)
             val x = m[Matrix.MTRANS_X]
             val y = m[Matrix.MTRANS_Y]
@@ -165,43 +175,46 @@ class MapView(
                     start.set(last)
                     mode = ZOOM
                 }
-                MotionEvent.ACTION_MOVE ->                         //if the mode is ZOOM or
-                    //if the mode is DRAG and already zoomed
+                MotionEvent.ACTION_MOVE -> {
                     if (mode == ZOOM || mode == DRAG && saveScale > minScale) {
-                        var deltaX = curr.x - last.x // x difference
-                        var deltaY = curr.y - last.y // y difference
-                        val scaleWidth =
-                            Math.round(origWidth * saveScale)
-                                .toFloat() // width after applying current scale
-                        val scaleHeight =
-                            Math.round(origHeight * saveScale)
-                                .toFloat() // height after applying current scale
-                        //if scaleWidth is smaller than the views width
-                        //in other words if the image width fits in the view
-                        //limit left and right movement
+                        var deltaX = curr.x - last.x
+                        var deltaY = curr.y - last.y
+                        val scaleWidth = (origWidth * saveScale).roundToInt()
+                        val scaleHeight = (origHeight * saveScale).roundToInt()
                         if (scaleWidth < width) {
                             deltaX = 0f
-                            if (y + deltaY > 0) deltaY =
-                                -y else if (y + deltaY < -bottom) deltaY = -(y + bottom)
+                            if (y + deltaY > 0) {
+                                deltaY = -y
+                            } else if (y + deltaY < -bottom) {
+                                deltaY = -(y + bottom)
+                            }
                         } else if (scaleHeight < height) {
                             deltaY = 0f
-                            if (x + deltaX > 0) deltaX =
-                                -x else if (x + deltaX < -right) deltaX = -(x + right)
+                            if (x + deltaX > 0) {
+                                deltaX = -x
+                            } else if (x + deltaX < -right) {
+                                deltaX = -(x + right)
+                            }
                         } else {
-                            if (x + deltaX > 0) deltaX =
-                                -x else if (x + deltaX < -right) deltaX = -(x + right)
-                            if (y + deltaY > 0) deltaY =
-                                -y else if (y + deltaY < -bottom) deltaY = -(y + bottom)
+                            if (x + deltaX > 0) {
+                                deltaX = -x
+                            } else if (x + deltaX < -right) {
+                                deltaX = -(x + right)
+                            }
+                            if (y + deltaY > 0) {
+                                deltaY = -y
+                            } else if (y + deltaY < -bottom) {
+                                deltaY = -(y + bottom)
+                            }
                         }
-                        //move the image with the matrix
                         customMatrix.postTranslate(deltaX, deltaY)
-                        //set the last touch location to the current
                         last[curr.x] = curr.y
                     }
+                }
                 MotionEvent.ACTION_UP -> {
                     mode = NONE
-                    val xDiff = Math.abs(curr.x - start.x).toInt()
-                    val yDiff = Math.abs(curr.y - start.y).toInt()
+                    val xDiff = abs(curr.x - start.x).toInt()
+                    val yDiff = abs(curr.y - start.y).toInt()
                     if (xDiff < CLICK && yDiff < CLICK) {
                         performClick()
                         findState(event)?.let(::onStateTouched)
