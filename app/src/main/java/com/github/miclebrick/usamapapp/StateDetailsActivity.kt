@@ -16,7 +16,9 @@ import android.widget.Toast
 import androidx.core.graphics.minus
 import androidx.core.graphics.toPointF
 import kotlinx.android.synthetic.main.activity_state_details.*
-import kotlin.math.abs
+import kotlin.math.acos
+import kotlin.math.pow
+import kotlin.math.sqrt
 
 class StateDetailsActivity : AppCompatActivity() {
     companion object {
@@ -104,20 +106,24 @@ class StateDetailsActivity : AppCompatActivity() {
         }
 
         override fun onFling(e1: MotionEvent, e2: MotionEvent, vx: Float, vy: Float): Boolean {
-            val nextState = State.values()
-                .filter { it != state }
-                .filter { cosineSimilarity(offset(it), PointF(-vx, -vy)) < 30 }
-                .minBy { manhattanDistance(it.viewPoint.toPointF(), state.viewPoint.toPointF()) }
-                ?: return false
+            var nextState: State?
+            var maxDegrees = 0
+            do {
+                maxDegrees++
+                nextState = State.values()
+                    .filter { it != state }
+                    .filter { theta(offset(it), PointF(-vx, -vy)) <= maxDegrees }
+                    .minBy { distance(it.viewPoint.toPointF(), state.viewPoint.toPointF()) }
+            } while (nextState == null)
             open(this@StateDetailsActivity, nextState)
             return true
         }
 
-        private fun cosineSimilarity(p1: PointF, p2: PointF) =
-            (p1.x * p2.x + p1.y * p2.y) / (p1.length() * p2.length())
+        private fun theta(p1: PointF, p2: PointF) =
+            Math.toDegrees(acos((p1.x * p2.x + p1.y * p2.y) / (p1.length() * p2.length())).toDouble())
 
-        private fun manhattanDistance(p1: PointF, p2: PointF) =
-            abs(p2.x - p1.x) + abs(p2.y - p1.y)
+        private fun distance(p1: PointF, p2: PointF) =
+            sqrt((p2.x - p1.x).pow(2) + (p2.y - p1.y).pow(2))
 
         private fun offset(s: State): PointF {
             return s.viewPoint.toPointF() - state.viewPoint.toPointF()
