@@ -231,11 +231,6 @@ class MapView(
     }
 
     private fun onStateTouched(state: State) {
-        val text = """
-            ${state.name}
-            ${state.youtubeLink}
-            ${state.details}
-        """.trimIndent()
-        Toast.makeText(context, text, Toast.LENGTH_LONG).show()
+
     }
 }
