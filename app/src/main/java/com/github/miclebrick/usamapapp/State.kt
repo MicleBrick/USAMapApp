@@ -160,38 +160,333 @@ enum class State(
         """.trimIndent()
     ),
     Louisiana(
-        nameRect = Rect()
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/IZTSj0u5hZo",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
     ),
-    Maine,
-    Maryland,
-    Massachusetts,
-    Michigan,
-    Minnesota,
-    Mississippi,
-    Missouri,
-    Montana,
-    Nebraska,
-    Nevada,
-    NewHampshire,
-    NewJersey,
-    NewMexico,
-    NewYork,
-    NorthCarolina,
-    NorthDakota,
-    Ohio,
-    Oklahoma,
-    Oregon,
-    Pennsylvania,
-    RhodeIsland,
-    SouthCarolina,
-    SouthDakota,
-    Tennessee,
-    Texas,
-    Utah,
-    Vermont,
-    Virginia,
-    Washington,
-    WestVirginia,
-    Wisconsin,
-    Wyoming;
+    Maine(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/nm2kZHa41nY",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    ),
+    Maryland(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/DmczFUDKYb0",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    ),
+    Massachusetts(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/bOaFTEsDHI8",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    ),
+    Michigan(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/jxC0735hZwU",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    ),
+    Minnesota(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/jxC0735hZwU",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    ),
+    Mississippi(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/W6H58RFao2c",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    ),
+    Missouri(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/YqHVHU6xGmw",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    ),
+    Montana(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/YqHVHU6xGmw",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    ),
+    Nebraska(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/QULWibKTrFM",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    ),
+    Nevada(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/ILZpOQ9CCZs",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    ),
+    NewHampshire(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/v1rJ6-YWe2o",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    ),
+    NewJersey(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/YkYbLuG443U",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    ),
+    NewMexico(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/fVe8CLPdocQ",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    ),
+    NewYork(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/aCIxwk7dwA8",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    ),
+    NorthCarolina(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/ekLtTY0MOzY",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    ),
+    NorthDakota(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/96l3kYt_T5o",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    ),
+    Ohio(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/9Ziq6PDcKNI",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    ),
+    Oklahoma(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/AVVSP9Kl50U",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    ),
+    Oregon(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/-UsrYdMIikY",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    ),
+    Pennsylvania(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/-UsrYdMIikY",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    ),
+    RhodeIsland(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/LlFS5ffgKKQ",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    ),
+    SouthCarolina(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/JmhK2mcge-E",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    ),
+    SouthDakota(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/-xIUwPPID8A",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    ),
+    Tennessee(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/-xIUwPPID8A",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    ),
+    Texas(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/2Jpgd8yKpUI",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    ),
+    Utah(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/pxrkCijGKvA",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    ),
+    Vermont(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/K_Yg-OJ-ris",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    ),
+    Virginia(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/2w6hHDaA03M",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    ),
+    Washington(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/AZGUKndD79Y",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    ),
+    WestVirginia(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/MSO3JwIlDl0",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    ),
+    Wisconsin(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/uZ3G2cjmZSc",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    ),
+    Wyoming(
+        nameRect = Rect(),
+        viewPoint = Point(),
+        youtubeLink = "https://youtu.be/tY6n7cxeLss",
+        details = """
+            Population: 
+            Area: 
+            Capital: 
+        """.trimIndent()
+    );
 }
