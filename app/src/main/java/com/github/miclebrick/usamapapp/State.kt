@@ -415,8 +415,8 @@ enum class State(
         """.trimIndent()
     ),
     WestVirginia(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(599, 281, 660, 291),
+        viewPoint = Point(625, 290),
         youtubeLink = "https://youtu.be/MSO3JwIlDl0",
         details = """
             Population: 1.79 million
@@ -424,8 +424,8 @@ enum class State(
         """.trimIndent()
     ),
     Wisconsin(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(466, 184, 514, 193),
+        viewPoint = Point(490, 190),
         youtubeLink = "https://youtu.be/uZ3G2cjmZSc",
         details = """
             Population:
@@ -433,8 +433,8 @@ enum class State(
         """.trimIndent()
     ),
     Wyoming(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(234, 207, 278, 218),
+        viewPoint = Point(250, 210),
         youtubeLink = "https://youtu.be/tY6n7cxeLss",
         details = """
             Population: 5.82 million
