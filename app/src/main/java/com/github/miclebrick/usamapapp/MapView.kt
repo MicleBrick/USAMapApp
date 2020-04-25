@@ -1,6 +1,7 @@
 package com.github.miclebrick.usamapapp
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.Matrix
 import android.graphics.PointF
@@ -231,6 +232,8 @@ class MapView(
     }
 
     private fun onStateTouched(state: State) {
-
+        val intent = Intent(context, StateDetailsActivity::class.java)
+        intent.putExtra("state", state.name)
+        context.startActivity(intent)
     }
 }
