@@ -1,7 +1,6 @@
 package com.github.miclebrick.usamapapp
 
 import android.content.Context
-import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.Matrix
 import android.graphics.PointF
@@ -217,14 +216,21 @@ class MapView(
                     val yDiff = abs(curr.y - start.y).toInt()
                     if (xDiff < CLICK && yDiff < CLICK) {
                         performClick()
-                        findState(event)?.let(::onStateTouched)
+                        onTap(event)
                     }
                 }
                 MotionEvent.ACTION_POINTER_UP -> mode = NONE
             }
             imageMatrix = customMatrix
             invalidate()
-            true
+            return@setOnTouchListener true
+        }
+    }
+
+    private fun onTap(event: MotionEvent) {
+        val state = findState(event)
+        if (state != null) {
+            StateDetailsActivity.open(this.context, state)
         }
     }
 
@@ -244,9 +250,4 @@ class MapView(
         }
     }
 
-    private fun onStateTouched(state: State) {
-        val intent = Intent(context, StateDetailsActivity::class.java)
-        intent.putExtra("state", state.name)
-        context.startActivity(intent)
-    }
 }
