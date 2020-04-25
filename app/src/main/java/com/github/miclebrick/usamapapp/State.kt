@@ -14,8 +14,7 @@ enum class State(
         viewPoint = Point(550, 400),
         youtubeLink = "https://youtu.be/sBtTter1Cmk",
         details = """
-            Population: 4.87 million (2017)
-            Area: 52,419 sq miles
+            Population: 4.87 million
             Capital: Montgomery
         """.trimIndent()
     ),
@@ -24,8 +23,7 @@ enum class State(
         viewPoint = Point(165, 365),
         youtubeLink = "https://youtu.be/t7etNRVGXag",
         details = """
-            Population: 7.02 million (2017)
-            Area: 113,998 sq miles
+            Population: 7.02 million
             Capital: Phoenix
         """.trimIndent()
     ),
@@ -34,8 +32,7 @@ enum class State(
         viewPoint = Point(460, 370),
         youtubeLink = "https://youtu.be/A_2gLmuPkJg",
         details = """
-            Population: 3 million (2017)
-            Area: 53,179 sq miles
+            Population: 3 million
             Capital: Little Rock
         """.trimIndent()
     ),
@@ -44,8 +41,7 @@ enum class State(
         viewPoint = Point(50, 290),
         youtubeLink = "https://youtu.be/uw6rz_LiTzU",
         details = """
-            Population: 39.54 million (2017)
-            Area: 163,696 sq miles
+            Population: 39.54 million
             Capital: Sacramento
         """.trimIndent()
     ),
@@ -54,8 +50,7 @@ enum class State(
         viewPoint = Point(270, 290),
         youtubeLink = "https://youtu.be/D5Raubb1LWA",
         details = """
-            Population: 5.61 million (2017)
-            Area: 104,185 sq miles
+            Population: 5.61 million
             Capital: Denver
         """.trimIndent()
     ),
@@ -64,8 +59,7 @@ enum class State(
         viewPoint = Point(728, 205),
         youtubeLink = "https://youtu.be/iPayvEJeBTk",
         details = """
-            Population: 3.59 million (2017)
-            Area: 5,543 sq miles
+            Population: 3.59 million
             Capital: Hartford
         """.trimIndent()
     ),
@@ -74,8 +68,7 @@ enum class State(
         viewPoint = Point(700, 265),
         youtubeLink = "https://youtu.be/L05ONfpJGvE",
         details = """
-            Population: 0.96 million (2017)
-            Area: 2,491 sq miles
+            Population: 0.96 million
             Capital: Dover
         """.trimIndent()
     ),
@@ -84,8 +77,7 @@ enum class State(
         viewPoint = Point(640, 475),
         youtubeLink = "https://youtu.be/OZHen61iV_c",
         details = """
-            Population: 21.67 million (2019)
-            Area: 65,755 sq miles
+            Population: 21.67 million
             Capital: Tallahassee
         """.trimIndent()
     ),
@@ -94,8 +86,7 @@ enum class State(
         viewPoint = Point(600, 400),
         youtubeLink = "https://youtu.be/hWxAeRnpDns",
         details = """
-            Population: 10.43 million (2017)
-            Area: 59,425 sq miles
+            Population: 10.43 million
             Capital: Atlanta
         """.trimIndent()
     ),
@@ -104,8 +95,7 @@ enum class State(
         viewPoint = Point(160, 180),
         youtubeLink = "https://youtu.be/gnONYpms2Q0",
         details = """
-            Population: 1.72 million (2017)
-            Area: 83,642 sq miles
+            Population: 1.72 million
             Capital: Boise
         """.trimIndent()
     ),
@@ -114,8 +104,7 @@ enum class State(
         viewPoint = Point(500, 275),
         youtubeLink = "https://youtu.be/hQnTjWo21Ak",
         details = """
-            Population: 12.8 million (2017)
-            Area: 57,915 sq miles
+            Population: 12.8 million
             Capital: Springfield
         """.trimIndent()
     ),
@@ -124,8 +113,7 @@ enum class State(
         viewPoint = Point(550, 270),
         youtubeLink = "https://youtu.be/MOQox8ol2G8",
         details = """
-            Population: 6.67 million (2017)
-            Area: 36,418 sq miles
+            Population: 6.67 million
             Capital: Indianapolis
         """.trimIndent()
     ),
@@ -134,8 +122,7 @@ enum class State(
         viewPoint = Point(440, 240),
         youtubeLink = "https://youtu.be/TncR2MS18wk",
         details = """
-            Population: 3.15 million (2017)
-            Area: 56,272 sq miles
+            Population: 3.15 million
             Capital: Des Moines
         """.trimIndent()
     ),
@@ -144,8 +131,7 @@ enum class State(
         viewPoint = Point(370, 300),
         youtubeLink = "https://youtu.be/3gEmSa0esDs",
         details = """
-            Population: 2.91 million (2017)
-            Area: 82,277 sq miles
+            Population: 2.91 million
             Capital: Topeka
         """.trimIndent()
     ),
@@ -154,309 +140,278 @@ enum class State(
         viewPoint = Point(570, 310),
         youtubeLink = "https://youtu.be/3gEmSa0esDs",
         details = """
-            Population: 4.45 million (2017)
-            Area: 40,409 sq miles
+            Population: 4.45 million
             Capital: Frankfort
         """.trimIndent()
     ),
     Louisiana(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(451, 444, 495, 453),
+        viewPoint = Point(460, 440),
         youtubeLink = "https://youtu.be/IZTSj0u5hZo",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 4.65 million
+            Capital: Baton Rouge
         """.trimIndent()
     ),
     Maine(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(747, 128, 775, 137),
+        viewPoint = Point(750, 130),
         youtubeLink = "https://youtu.be/nm2kZHa41nY",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 1.34 million
+            Capital: Augusta
         """.trimIndent()
     ),
     Maryland(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(655, 252, 699, 262),
+        viewPoint = Point(680, 260),
         youtubeLink = "https://youtu.be/DmczFUDKYb0",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 6.05 million
+            Capital: Annapolis
         """.trimIndent()
     ),
     Massachusetts(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(718, 187, 787, 195),
+        viewPoint = Point(735, 190),
         youtubeLink = "https://youtu.be/bOaFTEsDHI8",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 6.89 million
+            Capital: Boston
         """.trimIndent()
     ),
     Michigan(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(539, 199, 581, 209),
+        viewPoint = Point(560, 210),
         youtubeLink = "https://youtu.be/jxC0735hZwU",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 9.99 million
+            Capital: Lansing
         """.trimIndent()
     ),
     Minnesota(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(409, 156, 459, 164),
+        viewPoint = Point(425, 165),
         youtubeLink = "https://youtu.be/jxC0735hZwU",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 5.64 million
+            Capital: Saint Paul
         """.trimIndent()
     ),
     Mississippi(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(483, 394, 533, 404),
+        viewPoint = Point(500, 400),
         youtubeLink = "https://youtu.be/W6H58RFao2c",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 2.98 million
+            Capital: Jackson
         """.trimIndent()
     ),
     Missouri(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(444, 303, 483, 311),
+        viewPoint = Point(450, 300),
         youtubeLink = "https://youtu.be/YqHVHU6xGmw",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 6.14 million
+            Capital: Jefferson City
         """.trimIndent()
     ),
     Montana(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(223, 128, 264, 137),
+        viewPoint = Point(230, 130),
         youtubeLink = "https://youtu.be/YqHVHU6xGmw",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 1.07 million
+            Capital: Helena
         """.trimIndent()
     ),
     Nebraska(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(334, 245, 377, 253),
+        viewPoint = Point(350, 250),
         youtubeLink = "https://youtu.be/QULWibKTrFM",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 1.93 million
+            Capital: Lincoln
         """.trimIndent()
     ),
     Nevada(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(98, 261, 133, 269),
+        viewPoint = Point(110, 260),
         youtubeLink = "https://youtu.be/ILZpOQ9CCZs",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 3.08 million
+            Capital: Carson City
         """.trimIndent()
     ),
     NewHampshire(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(728, 168, 790, 177),
+        viewPoint = Point(730, 160),
         youtubeLink = "https://youtu.be/v1rJ6-YWe2o",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 1.36 million
+            Capital: Concord
         """.trimIndent()
     ),
     NewJersey(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(704, 234, 757, 245),
+        viewPoint = Point(710, 240),
         youtubeLink = "https://youtu.be/YkYbLuG443U",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 8.88 million
+            Capital: Trenton
         """.trimIndent()
     ),
     NewMexico(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(231, 368, 289, 377),
+        viewPoint = Point(250, 370),
         youtubeLink = "https://youtu.be/fVe8CLPdocQ",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 2.097 million
+            Capital: Santa Fe
         """.trimIndent()
     ),
     NewYork(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(663, 188, 707, 197),
+        viewPoint = Point(690, 190),
         youtubeLink = "https://youtu.be/aCIxwk7dwA8",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 19.45 million
+            Capital: Albany
         """.trimIndent()
     ),
     NorthCarolina(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(630, 333, 699, 341),
+        viewPoint = Point(660, 340),
         youtubeLink = "https://youtu.be/ekLtTY0MOzY",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 10.49 million
+            Capital: Raleigh
         """.trimIndent()
     ),
     NorthDakota(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(327, 132, 389, 141),
+        viewPoint = Point(350, 140),
         youtubeLink = "https://youtu.be/96l3kYt_T5o",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 762,062
+            Capital: Bismarck
         """.trimIndent()
     ),
     Ohio(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(586, 254, 608, 262),
+        viewPoint = Point(600, 260),
         youtubeLink = "https://youtu.be/9Ziq6PDcKNI",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 11.69 million
+            Capital: Columbus
         """.trimIndent()
     ),
     Oklahoma(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(370, 354, 418, 363),
+        viewPoint = Point(390, 360),
         youtubeLink = "https://youtu.be/AVVSP9Kl50U",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 3.96 million
+            Capital: Oklahoma City
         """.trimIndent()
     ),
     Oregon(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(62, 157, 98, 168),
+        viewPoint = Point(80, 160),
         youtubeLink = "https://youtu.be/-UsrYdMIikY",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 4.22 million
+            Capital: Salem
         """.trimIndent()
     ),
     Pennsylvania(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(630, 232, 691, 242),
+        viewPoint = Point(660, 240),
         youtubeLink = "https://youtu.be/-UsrYdMIikY",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 12.8 million
+            Capital: Harrisburg
         """.trimIndent()
     ),
     RhodeIsland(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(744, 199, 794, 206),
+        viewPoint = Point(740, 200),
         youtubeLink = "https://youtu.be/LlFS5ffgKKQ",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 1.06 million
+            Capital: Providence
         """.trimIndent()
     ),
     SouthCarolina(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(617, 366, 686, 375),
+        viewPoint = Point(640, 370),
         youtubeLink = "https://youtu.be/JmhK2mcge-E",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 5.15 million
+            Capital: Columbia
         """.trimIndent()
     ),
     SouthDakota(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(327, 189, 390, 197),
+        viewPoint = Point(350, 190),
         youtubeLink = "https://youtu.be/-xIUwPPID8A",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 884,659
+            Capital: Pierre
         """.trimIndent()
     ),
     Tennessee(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(527, 342, 576, 350),
+        viewPoint = Point(550, 350),
         youtubeLink = "https://youtu.be/-xIUwPPID8A",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 6.83 million
+            Capital: Nashville
         """.trimIndent()
     ),
     Texas(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(337, 431, 363, 439),
+        viewPoint = Point(350, 430),
         youtubeLink = "https://youtu.be/2Jpgd8yKpUI",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 29 million
+            Capital: Austin
         """.trimIndent()
     ),
     Utah(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(176, 266, 197, 275),
+        viewPoint = Point(190, 270),
         youtubeLink = "https://youtu.be/pxrkCijGKvA",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 3.21 million
+            Capital: Salt Lake City
         """.trimIndent()
     ),
     Vermont(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(695, 147, 736, 156),
+        viewPoint = Point(715, 165),
         youtubeLink = "https://youtu.be/K_Yg-OJ-ris",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 623,989
+            Capital: Montpelier
         """.trimIndent()
     ),
     Virginia(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(650, 295, 686, 305),
+        viewPoint = Point(660, 300),
         youtubeLink = "https://youtu.be/2w6hHDaA03M",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 8.54 million
+            Capital: Richmond
         """.trimIndent()
     ),
     Washington(
-        nameRect = Rect(),
-        viewPoint = Point(),
+        nameRect = Rect(87, 92, 144, 104),
+        viewPoint = Point(100, 100),
         youtubeLink = "https://youtu.be/AZGUKndD79Y",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 7.62 million
+            Capital: Olympia
         """.trimIndent()
     ),
     WestVirginia(
@@ -464,9 +419,8 @@ enum class State(
         viewPoint = Point(),
         youtubeLink = "https://youtu.be/MSO3JwIlDl0",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 1.79 million
+            Capital: Charleston
         """.trimIndent()
     ),
     Wisconsin(
@@ -474,8 +428,7 @@ enum class State(
         viewPoint = Point(),
         youtubeLink = "https://youtu.be/uZ3G2cjmZSc",
         details = """
-            Population: 
-            Area: 
+            Population:
             Capital: 
         """.trimIndent()
     ),
@@ -484,9 +437,8 @@ enum class State(
         viewPoint = Point(),
         youtubeLink = "https://youtu.be/tY6n7cxeLss",
         details = """
-            Population: 
-            Area: 
-            Capital: 
+            Population: 5.82 million
+            Capital: Madison
         """.trimIndent()
     );
 }
