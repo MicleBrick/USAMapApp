@@ -1,5 +1,6 @@
 package com.github.miclebrick.usamapapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -19,6 +20,9 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
         pagerView.adapter = SplashPagerAdapter(supportFragmentManager)
         tabLayout.setupWithViewPager(pagerView)
+        button.setOnClickListener {
+            startActivity(Intent(this, HomepageActivity::class.java))
+        }
     }
 
     private inner class SplashPagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {

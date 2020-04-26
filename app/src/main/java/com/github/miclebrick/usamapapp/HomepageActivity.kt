@@ -22,10 +22,10 @@ class HomepageActivity : AppCompatActivity() {
 
     private fun splashScreen(): Boolean {
         val prefs = getPreferences(Context.MODE_PRIVATE)
-        if (prefs.getBoolean("displayed_splash", false)) {
+        if (!prefs.getBoolean("first_time", true)) {
             return false
         }
-        prefs.edit().putBoolean("displayed_splash", true).apply()
+        prefs.edit().putBoolean("first_time", false).apply()
         startActivity(Intent(this, SplashActivity::class.java))
         finish()
         return true
