@@ -37,13 +37,8 @@ class StateDetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_state_details)
-        setBackground()
         loadState()
         setupNavigation()
-    }
-
-    private fun setBackground() {
-
     }
 
     @SuppressLint("SetTextI18n")
